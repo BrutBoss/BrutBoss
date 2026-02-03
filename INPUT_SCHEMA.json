@@ -1,0 +1,56 @@
+{
+  "title": "Job Aggregator Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchQueries": {
+      "title": "Search queries",
+      "type": "array",
+      "description": "Job search phrases to query.",
+      "items": {
+        "type": "string"
+      },
+      "editor": "stringList"
+    },
+    "location": {
+      "title": "Location",
+      "type": "string",
+      "description": "Location to search within.",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "maxResults": {
+      "title": "Max results per source",
+      "type": "integer",
+      "description": "Maximum number of results per query and source.",
+      "default": 100,
+      "editor": "number"
+    },
+    "rateLimitRpm": {
+      "title": "Rate limit (requests per minute)",
+      "type": "integer",
+      "description": "Requests per minute for throttling.",
+      "default": 30,
+      "editor": "number"
+    },
+    "sources": {
+      "title": "Sources",
+      "type": "array",
+      "description": "Sources to scrape.",
+      "items": {
+        "type": "string",
+        "enum": ["google", "indeed"]
+      },
+      "default": ["google", "indeed"],
+      "editor": "select"
+    },
+    "proxy": {
+      "title": "Use Apify Proxy",
+      "type": "boolean",
+      "description": "Enable Apify Proxy for better reliability.",
+      "default": false,
+      "editor": "checkbox"
+    }
+  },
+  "required": ["searchQueries", "location"]
+}
