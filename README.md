@@ -25,4 +25,3 @@ npm test
 ## Input
 
 See `INPUT_SCHEMA.json` for input parameters.
-
