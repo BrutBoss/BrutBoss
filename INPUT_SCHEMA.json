@@ -15,8 +15,7 @@
     "location": {
       "title": "Location",
       "type": "string",
-      "description": "Location to search within.",
-      "editor": "textfield"
+      "description": "Location to search within."
     },
     "maxResults": {
       "title": "Max results per source",
