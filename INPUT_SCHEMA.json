@@ -15,19 +15,23 @@
     "location": {
       "title": "Location",
       "type": "string",
-      "description": "Location to search within."
+      "description": "Location to search within.",
+      "editor": "textfield",
+      "prefill": ""
     },
     "maxResults": {
       "title": "Max results per source",
       "type": "integer",
       "description": "Maximum number of results per query and source.",
-      "default": 100
+      "default": 100,
+      "editor": "number"
     },
     "rateLimitRpm": {
       "title": "Rate limit (requests per minute)",
       "type": "integer",
       "description": "Requests per minute for throttling.",
-      "default": 30
+      "default": 30,
+      "editor": "number"
     },
     "sources": {
       "title": "Sources",
@@ -44,7 +48,8 @@
       "title": "Use Apify Proxy",
       "type": "boolean",
       "description": "Enable Apify Proxy for better reliability.",
-      "default": false
+      "default": false,
+      "editor": "checkbox"
     }
   },
   "required": ["searchQueries", "location"]
